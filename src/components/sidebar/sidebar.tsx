@@ -72,7 +72,7 @@ const Desktop = ({menu, logo, logosquare}: Props) => {
     <div
       className={`
         ${expand || isHovered ? 'w-64' : 'w-20'} 
-        h-screen absolute bg-dark text-light top-0 py-4
+        h-screen fixed bg-dark text-light top-0 py-4
         transition-all duration-200 ease-in-out
         z-50
       `}

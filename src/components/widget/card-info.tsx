@@ -86,12 +86,12 @@ const CardInfo = ({title, amount, grow, growAmount, data}: Props) => {
   return (
     <div className="p-4 border border-gray-200 shadow-lg rounded-lg flex gap-2 items-center">
       
-      <div style={{width: "55%"}}>
+      <div style={{width: "60%"}}>
         <span className="text-sm font-semibold">{initialData.title}</span>
         <div className="py-3 text-3xl font-semibold">
-          { initialData.amount }
+          { initialData.amount.toLocaleString() }
         </div>
-        <div className="flex text-sm gap-2">
+        <div className="flex text-xs gap-2">
           <span className={`flex items-center gap-1 font-bold ${initialData.grow === "up" ? "text-green-500" : "text-red-600" }`}>
             {
               initialData.grow === "up" ? (
@@ -100,13 +100,13 @@ const CardInfo = ({title, amount, grow, growAmount, data}: Props) => {
                 <ArrowDown weight="bold" />
               )
             }
-            { initialData.growAmount }
+            { initialData.growAmount.toLocaleString() }
           </span>
           vs yesterday
         </div>
       </div>
 
-      <div style={{width: "45%"}}>
+      <div style={{width: "40%"}}>
         <ChartDOM
           type="line"
           ref={chartRef}
