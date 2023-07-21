@@ -1,7 +1,7 @@
 import { menu } from "../sidebar/menu"
 import Sidebar from "../sidebar/sidebar"
 import "./base.css"
-import Logo from "../../assets/img/yourlogo.png"
+import Logo from "../../assets/img/samplelogo.png"
 import LogoSquare from "../../assets/img/yourlogosquare.png"
 import Navbar from "../navbar/navbar"
 import { useMenu } from "../../store/menu"
@@ -28,7 +28,7 @@ const BaseLayout = ({children}: Props) => {
         ${expand ? 'md:pl-64' : 'md:pl-20'}
       `}>
         <Navbar logo={Logo} />
-        <div className="px-4 py-6">
+        <div className="px-4 pt-24 pb-6">
           {children}
         </div>
       </div>

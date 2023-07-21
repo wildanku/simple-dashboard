@@ -26,10 +26,10 @@ const Navbar = ({logo}: Props) => {
   }
 
   return (
-    <div className="py-3 md:py-2 px-4 w-full bg-dark md:bg-light shadow-lg relative">
+    <div className="py-3 md:py-2 pl-6 pr-4 w-full z-50 bg-white fixed left-0">
       <div className="flex justify-between items-center">
         <div>
-          <div className="hidden md:flex items-center gap-2" >
+          <div className="hidden md:flex items-center gap-3" >
             <div onClick={handleExpand}>
               <BurgerMenu
                 rect1w={expand ? 80 : 60}
@@ -37,18 +37,19 @@ const Navbar = ({logo}: Props) => {
                 className="cursor-pointer fill-gray-700 hover:fill-gray-600"
               />
             </div>
-            <Breadcrumb />
+            <img src={logo} className="h-8 flex" alt="" />
+            {/* <Breadcrumb /> */}
           </div>
-          <div className="md:hidden py-1 flex items-center gap-2">
+          <div className="py-1 flex md:hidden items-center gap-2">
             <div onClick={handleOpen}>
               <BurgerMenu
                 rect1w={!open ? 80 : 80}
                 rect2w={!open ? 80 : 80}
                 rect3w={!open ? 60 : 80}
-                className="cursor-pointer fill-gray-50"
+                className="cursor-pointer "
               />
             </div>
-            <img src={logo} className="h-5 flex" alt="" />
+            <img src={logo} className="h-8 flex" alt="" />
           </div>
         </div>
         <div className="flex gap-3 items-center">

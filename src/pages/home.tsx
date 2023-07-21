@@ -8,7 +8,7 @@ const HomePage = () => {
   return (
     <BaseLayout>
       <Title title="Dashboard" />
-      <div className="md:grid md:grid-cols-4 md:gap-3 mt-4">
+      <div className="grid md:grid-cols-4 grid-cols-1 gap-3 mt-4">
         <CardInfo
           title="Total Employees"
           amount={2420}

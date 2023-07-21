@@ -72,24 +72,13 @@ const Desktop = ({menu, logo, logosquare}: Props) => {
     <div
       className={`
         ${expand || isHovered ? 'w-64' : 'w-20'} 
-        h-screen fixed bg-dark text-light top-0 py-4
+        h-screen fixed text-gray-800 bg-white top-0 py-4
         transition-all duration-200 ease-in-out
-        z-50
+        z-10
       `}
     >
-      <ul className="pre-menu">
-        <li className={`py-2 logo mb-2 px-2 flex justify-center`}>
-          {
-            expand || isHovered ? (
-              <img src={logo} className="h-8" alt="" />
-            ) : (
-              <img src={logosquare ?? logo} className="h-8" alt="" />
-            )
-          }
-        </li>
-      </ul>
       <ul
-        className="menu"
+        className="menu mt-12"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
@@ -227,7 +216,7 @@ const Mobile = ({menu, logo}: Props) => {
         h-screen absolute z-10 w-full
       `}>
         <div 
-          className="h-screen w-full bg-opacity-50 bg-gray-900" 
+          className="h-screen w-full bg-opacity-50 " 
           onClick={() => setOpen(false)} 
         />
         <div
@@ -244,7 +233,7 @@ const Mobile = ({menu, logo}: Props) => {
             leaveTo="-translate-x-full"
           >
             <ul
-              className="menu menu-responsive w-64 bg-dark h-screen text-light z-50"
+              className="menu menu-responsive w-64 mt-12 bg-gray-100 h-screen  z-50"
             >
               {
                 menu.map((item, key) => (
